@@ -2,14 +2,12 @@
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="45" alt="Get it on F-Droid" />](https://f-droid.org/en/packages/io.github.aloussase.booksdownloader)
 
 <p align=center>
-  <img alt="logo" src="app/src/main/res/drawable-night/logo.png" width=200/>
+  <img alt="logo" src="app/app/src/main/res/drawable-night/logo.png" width=200/>
 </p>
 
 <h1 align=center>Alexandria</h1>
 
 Alexandria is an open source application for downloading and converting EBooks.
-
-Follow me on Twitter at [@aloussase](https://x.com/aloussase) for updates on this app's development!
 
 **Features**
 
@@ -23,7 +21,7 @@ Follow me on Twitter at [@aloussase](https://x.com/aloussase) for updates on thi
 - Uses a custom-made proprietary API for converting books from one format to another. I will
   consider open-sourcing this once it's mature enough.
 
-## Install from F-droid
+## Install
 
 Download the F-droid app from [their website](https://f-droid.org/) and search for Alexandria.
 
@@ -37,11 +35,6 @@ Download the F-droid app from [their website](https://f-droid.org/) and search f
 ## Contributing
 
 Think you can make Alexandria better? Feel free to open an issue or PR about it!
-
-## Support
-
-All and any support is much appreciated! I you'd like to, you
-can <a href="https://ko-fi.com/aloussase" target="_blank">buy be a cola</a>.
 
 ## License
 
