@@ -1,43 +1,58 @@
-import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import viteLogo from '/vite.svg'
-import './app.css'
+import { useState } from "preact/hooks";
+import "./app.css";
+import logo from "./assets/logo.png";
+import a from "./assets/1.jpg";
+import b from "./assets/2.jpg";
 
 export function App() {
-  const [count, setCount] = useState(0)
+  const [email, setEmail] = useState("");
+
+  const onSubmit = () => {
+    console.log(email);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
-        </a>
+    <div className="w-screen h-screen bg-gradient-to-r  from-[#5de0e6] via-[#4378bc] to-[#004aad] flex items-center justify-center">
+      <div className="flex flex-col gap-2">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[180px] rounded self-center mb-8"
+        />
+        <h1 className="text-white text-6xl">Alexandria</h1>
+        <h2 className="text-white text-2xl">
+          All your books, just a click away
+        </h2>
+        <div className="flex gap-2 mt-8">
+          <input
+            type="email"
+            placeholder="I'm interested"
+            className="rounded p-1"
+            value={email}
+            onInput={(e) => setEmail(e.target.value)}
+          />
+          <button
+            type="submit"
+            className="text-white bg-[#4378bc] hover:bg-[#4378bc]/25 p-2 rounded shadow-sm"
+            onClick={onSubmit}
+          >
+            Notify me
+          </button>
+        </div>
       </div>
-      <h1>Vite + Preact</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/app.jsx</code> and save to test HMR
-        </p>
+      <div className="w-[250px]"></div>
+      <div className="flex gap-8">
+        <img
+          src={a}
+          alt="search books"
+          className="h-[400px] shadow-lg rounded -translate-y-10"
+        />
+        <img
+          src={b}
+          alt="convert books"
+          className="h-[400px] shadow-lg rounded translate-y-10"
+        />
       </div>
-      <p>
-        Check out{' '}
-        <a
-          href="https://preactjs.com/guide/v10/getting-started#create-a-vite-powered-preact-app"
-          target="_blank"
-        >
-          create-preact
-        </a>
-        , the official Preact + Vite starter
-      </p>
-      <p class="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
